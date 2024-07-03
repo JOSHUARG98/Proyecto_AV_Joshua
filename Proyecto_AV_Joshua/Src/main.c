@@ -24,6 +24,6 @@
 
 int main(void)
 {
-    /* Loop forever */
+    //Este es un comentarios 
 	for(;;);
 }
