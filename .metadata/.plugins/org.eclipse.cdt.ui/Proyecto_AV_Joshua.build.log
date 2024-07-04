@@ -1,0 +1,10 @@
+23:18:23 **** Incremental Build of configuration Debug for project Proyecto_AV_Joshua ****
+make -j8 all 
+arm-none-eabi-size  Proyecto_AV_Joshua.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1088	      0	   1568	   2656	    a60	Proyecto_AV_Joshua.elf
+Finished building: default.size.stdout
+ 
+
+23:18:23 Build Finished. 0 errors, 0 warnings. (took 151ms)
+
