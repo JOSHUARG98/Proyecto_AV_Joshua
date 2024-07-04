@@ -17,13 +17,23 @@
  */
 
 #include <stdint.h>
+#include <GPIOx.h>
 
-#if !defined(__SOFT_FP__) && defined(__ARM_FP)
-  #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
-#endif
+void delay(uint32_t c)
+{
+	while(c--);
+}
 
 int main(void)
 {
-    //Este es un comentarios 
-	for(;;);
+  RCC_EnPort(GPIOB);//configura reloj en puerto B
+	GPIOx_InitIO(GPIOB, 13, GPIO_MODER_OUTPUT, false);
+
+    while(1)
+    {
+		GPIOB->ODR  ^= 0x00002000;// Commute bit 13 with a xor operation
+        // delay = 250ms
+        delay(400000);
+    }
+
 }
