@@ -1,0 +1,3 @@
+../Src/GPIOx.c:20:6:GPIOx_InitAF	2
+../Src/GPIOx.c:34:6:GPIOx_InitIO	3
+../Src/GPIOx.c:51:6:RCC_EnPort	7
